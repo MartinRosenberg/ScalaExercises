@@ -2,16 +2,13 @@ package com.martinbrosenberg.exercises.ctci.chapter05
 
 /** CONVERSION
   *
-  * Write a function to determine the number of bits you would need to flip to convert integer A to integer B.
-  *
-  * EXAMPLE
-  * Input: 29 (or: 11101), 15 (or: 01111)
-  * Output: 2
+  * Write a function to determine the number of bits you would need to flip to
+  * convert integer A to integer B.
   */
 object E06_Conversion {
 
-  /** Diffs a and b (using XOR), then iterates from the lowest bit to the highest significant bit, counting all the
-    * ones.
+  /** Diffs a and b (using XOR), then iterates from the lowest bit to the
+    * highest significant bit, counting all the ones.
     */
   def numDifferentBits1(a: Int, b: Int): Int = {
     var diff = a ^ b
@@ -26,7 +23,9 @@ object E06_Conversion {
   /** Does the same, but using a `Stream`, a more functional approach. */
   def numDifferentBits2(a: Int, b: Int): Int = {
     def bits(diff: Int): Stream[Int] = diff #:: bits(diff >>> 1)
-    bits(a ^ b).takeWhile(_ != 0).count(x => (x & 1) == 1)
+    bits(a ^ b)
+      .takeWhile(_ != 0)
+      .count(x => (x & 1) == 1)
   }
 
 }

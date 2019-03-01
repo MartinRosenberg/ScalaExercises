@@ -2,13 +2,15 @@ package com.martinbrosenberg.exercises.ctci.chapter01
 
 /** CHECK PERMUTATION
   *
-  * Given two strings, write a method to decide if one is a permutation of the other.
+  * Given two strings, write a method to decide if one is a permutation of the
+  * other.
   */
 object E02_CheckPermutation {
 
   /** Constraints: None.
     *
-    * After quick checks of the obvious, sorts both strings and compares them. Probably the simplest solution.
+    * After quick checks of the obvious, sorts both strings and compares them.
+    * Probably the simplest solution.
     *
     * O(n log n) time.
     */
@@ -19,8 +21,8 @@ object E02_CheckPermutation {
 
   /** Constraints: Must be done in O(n) time.
     *
-    * After doing the same sanity checks, counts all the characters in `s1`, subtracts the counts from `s2`, and checks
-    * for parity.
+    * After doing the same sanity checks, counts all the characters in `s1`,
+    * subtracts the counts from `s2`, and checks for parity.
     */
   def isPermutation2(s1: String, s2: String): Boolean =
     if (s1 == s2) true
