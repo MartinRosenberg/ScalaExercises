@@ -6,9 +6,9 @@ Every exercise is tested using [ScalaTest](https://github.com/scalatest/scalates
 
 ## Exercises by source
 
-* **HackerRank** ([exercises](src/main/scala/com/martinbrosenberg/problems/hackerrank) | [tests](src/test/scala/com/martinbrosenberg/problems/hackerrank) | [website](https://www.hackerrank.com/))
-* **Rosetta Code** ([exercises](src/main/scala/com/martinbrosenberg/problems/rosettacode) | [tests](src/test/scala/com/martinbrosenberg/problems/rosettacode) | [website](http://rosettacode.org/))
-* **Ninety-Nine Scala Problems** ([exercises](src/main/scala/com/martinbrosenberg/problems/scalaproblems) | [tests](src/test/scala/com/martinbrosenberg/problems/scalaproblems) | [website](http://aperiodic.net/phil/scala/s-99/))
+* **HackerRank** ([exercises](src/main/scala/com/martinbrosenberg/exercises/hackerrank) | [tests](src/test/scala/com/martinbrosenberg/exercises/hackerrank) | [website](https://www.hackerrank.com/))
+* **Rosetta Code** ([exercises](src/main/scala/com/martinbrosenberg/exercises/rosettacode) | [tests](src/test/scala/com/martinbrosenberg/exercises/rosettacode) | [website](http://rosettacode.org/))
+* **Ninety-Nine Scala Problems** ([exercises](src/main/scala/com/martinbrosenberg/exercises/scalaproblems) | [tests](src/test/scala/com/martinbrosenberg/exercises/scalaproblems) | [website](http://aperiodic.net/phil/scala/s-99/))
 
 ## Roadmap
 
