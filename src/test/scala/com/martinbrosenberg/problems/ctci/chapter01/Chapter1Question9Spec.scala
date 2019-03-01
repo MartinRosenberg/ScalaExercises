@@ -1,0 +1,37 @@
+package com.martinbrosenberg.problems.ctci.chapter01
+
+import com.github.dwickern.macros.NameOf._
+import com.martinbrosenberg.problems.ctci.CtciBaseSpec
+import com.martinbrosenberg.problems.ctci.chapter01.Chapter1Question9._
+import com.martinbrosenberg.problems.ctci.chapter01.Chapter1Question9Spec._
+
+class Chapter1Question9Spec extends CtciBaseSpec {
+
+  s"`${nameOf(isRotation1 _)}` should correctly determine whether" - {
+    for (TestCase(s1, s2, isRotation) <- testCases) {
+      s"'$s1' is a rotation of '$s2'" in {
+        isRotation1(s1, s2) shouldBe isRotation
+      }
+    }
+  }
+
+}
+
+object Chapter1Question9Spec {
+
+  private case class TestCase(s1: String, s2: String, isRotation: Boolean)
+
+  private val testCases: Seq[TestCase] = Seq(
+    TestCase("waterbottle", "waterbottle",  isRotation = true ), // same string
+    TestCase("waterbottle", "erbottlewat",  isRotation = true ), // left rotation
+    TestCase("waterbottle", "tlewaterbot",  isRotation = true ), // right rotation
+    TestCase("waterbottle", "fscpuumfxb",   isRotation = false), // same length, not a rotation
+    TestCase("waterbottle", "erbottlewa",   isRotation = false), // substring rotation
+    TestCase("waterbottle", "erbottlewate", isRotation = false), // superstring rotation
+    TestCase("waterbottle", "erbottelwat",  isRotation = false), // out of order
+    TestCase("waterbottle", "",             isRotation = false), // empty string
+    TestCase("",            "waterbottle",  isRotation = false), // empty string
+    TestCase("",            "",             isRotation = true ), // empty string, vacuously true
+  )
+
+}

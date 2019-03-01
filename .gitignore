@@ -45,3 +45,8 @@ project/plugins/project/
 .cache
 .lib/
 
+### Environment
+
+## Apple
+
+.DS_Store
