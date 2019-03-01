@@ -5,11 +5,11 @@ import com.martinbrosenberg.problems.BaseSpec
 class P001_MultiplesOf3And5_Spec extends BaseSpec {
   import P001_MultiplesOf3And5_Spec._
 
-  for ((name, function) <- functions) {
-    s"Using function $name" - {
+  for ((fnName, sum) <- functions) {
+    s"Using function $fnName" - {
       for ((max, result) <- testCases) {
         s"sum of multiples of 3 or 5 under $max should be $result" in {
-          assertResult(result)(function(max))
+          assertResult(result)(sum(max))
         }
       }
     }
