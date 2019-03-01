@@ -1,9 +1,10 @@
 package com.martinbrosenberg.problems.hackerrank.projecteuler
 
 import com.martinbrosenberg.problems.BaseSpec
+import com.martinbrosenberg.problems.hackerrank.projecteuler.P006_SumSquareDifference._
+import com.martinbrosenberg.problems.hackerrank.projecteuler.P006_SumSquareDifference_Spec._
 
 class P006_SumSquareDifference_Spec extends BaseSpec {
-  import P006_SumSquareDifference_Spec._
 
   for ((fnName, difference) <- functions) {
     s"Using function $fnName" - {
@@ -18,14 +19,13 @@ class P006_SumSquareDifference_Spec extends BaseSpec {
 }
 
 object P006_SumSquareDifference_Spec {
-  import P006_SumSquareDifference._
 
-  val functions: Seq[(String, Long => Long)] = Seq(
+  private val functions = Seq[(String, Long => Long)](
     ("difference_1", difference_1),
     ("difference_2", difference_2),
   )
 
-  val testCases: Seq[(Int, Int)] = Seq(
+  private val testCases = Seq[(Int, Int)](
     (3, 22),
     (10, 2640),
     (100, 25164150)

@@ -1,10 +1,10 @@
 package com.martinbrosenberg.problems.rosettacode
 
 import com.martinbrosenberg.problems.BaseSpec
+import com.martinbrosenberg.problems.rosettacode.GeneralFizzBuzz._
+import com.martinbrosenberg.problems.rosettacode.GeneralFizzBuzz_Spec._
 
 class GeneralFizzBuzz_Spec extends BaseSpec {
-  import GeneralFizzBuzz._
-  import GeneralFizzBuzz_Spec._
 
   for ((factors, max, result) <- testCases) {
     s"FizzBuzz with factors $factors up to $max should be $result" in {
@@ -16,7 +16,7 @@ class GeneralFizzBuzz_Spec extends BaseSpec {
 
 object GeneralFizzBuzz_Spec {
 
-  val testCases: Seq[(Map[Int, String], Int, Seq[String])] = Seq(
+  private val testCases = Seq[(Map[Int, String], Int, Seq[String])](
     (
       Map(3 -> "Fizz", 5 -> "Buzz"),
       20,

@@ -1,9 +1,10 @@
 package com.martinbrosenberg.problems.hackerrank.projecteuler
 
 import com.martinbrosenberg.problems.BaseSpec
+import com.martinbrosenberg.problems.hackerrank.projecteuler.P002_EvenFibonacciNumbers._
+import com.martinbrosenberg.problems.hackerrank.projecteuler.P002_EvenFibonacciNumbers_Spec._
 
 class P002_EvenFibonacciNumbers_Spec extends BaseSpec {
-  import P002_EvenFibonacciNumbers_Spec._
 
   for ((fnName, sum) <- functions) {
     s"Using function $fnName" - {
@@ -18,14 +19,13 @@ class P002_EvenFibonacciNumbers_Spec extends BaseSpec {
 }
 
 object P002_EvenFibonacciNumbers_Spec {
-  import P002_EvenFibonacciNumbers._
 
-  val functions: Seq[(String, Long => Long)] = Seq(
+  private val functions = Seq[(String, Long => Long)](
     ("sum_1", sum_1),
     ("sum_2", sum_2),
   )
 
-  val testCases: Seq[(Long, Long)] = Seq(
+  private val testCases = Seq[(Long, Long)](
     (10, 10),
     (100, 44),
     (4000000, 4613732),

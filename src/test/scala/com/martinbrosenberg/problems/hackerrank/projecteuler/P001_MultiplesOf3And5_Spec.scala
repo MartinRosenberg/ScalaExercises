@@ -1,9 +1,10 @@
 package com.martinbrosenberg.problems.hackerrank.projecteuler
 
 import com.martinbrosenberg.problems.BaseSpec
+import com.martinbrosenberg.problems.hackerrank.projecteuler.P001_MultiplesOf3And5._
+import com.martinbrosenberg.problems.hackerrank.projecteuler.P001_MultiplesOf3And5_Spec._
 
 class P001_MultiplesOf3And5_Spec extends BaseSpec {
-  import P001_MultiplesOf3And5_Spec._
 
   for ((fnName, sum) <- functions) {
     s"Using function $fnName" - {
@@ -18,14 +19,13 @@ class P001_MultiplesOf3And5_Spec extends BaseSpec {
 }
 
 object P001_MultiplesOf3And5_Spec {
-  import P001_MultiplesOf3And5._
 
-  val functions: Seq[(String, Int => Long)] = Seq(
+  private val functions = Seq[(String, Int => Long)](
     ("sum_1", sum_1),
     ("sum_2", sum_2),
   )
 
-  val testCases: Seq[(Int, Long)] = Seq(
+  private val testCases = Seq[(Int, Long)](
     (10, 23L),
     (100, 2318L),
     (1000, 233168L),
