@@ -7,7 +7,7 @@ package com.martinbrosenberg.problems.hackerrank.projecteuler
   *
   * Find the sum of all positive multiples of 3 or 5 below N.
   *
-  * @see https://www.hackerrank.com/contests/projecteuler/challenges/euler001
+  * @see [[https://www.hackerrank.com/contests/projecteuler/challenges/euler001]]
   */
 object P001_MultiplesOf3And5 {
 

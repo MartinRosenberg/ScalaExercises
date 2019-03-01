@@ -10,12 +10,12 @@ package com.martinbrosenberg.problems.hackerrank.projecteuler
   * By considering the terms in the Fibonacci sequence whose values do not
   * exceed N, find the sum of the even-valued terms.
   *
-  * @see https://www.hackerrank.com/contests/projecteuler/challenges/euler002
+  * @see [[https://www.hackerrank.com/contests/projecteuler/challenges/euler002]]
   */
 object P002_EvenFibonacciNumbers {
 
   /** @author Luigi Plinge
-    * @see http://www.luigip.com/?p=200
+    * @see [[http://www.luigip.com/?p=200]]
     */
   val fibs: Stream[Long] = 0 #:: fibs.scanLeft(1L)(_ + _)
 
