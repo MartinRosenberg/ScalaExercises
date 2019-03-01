@@ -17,7 +17,7 @@ object E03_Urlify {
     *
     * Slow, because regex isn't known for speed.
     */
-  def urlify1(s: String): String =
+  def urlify_1(s: String): String =
     s
       .trim
       .replaceAll(" ", "%20")
@@ -26,7 +26,7 @@ object E03_Urlify {
     *
     * Basically the same, but copies the results back into the original string.
     */
-  def urlify2(arr: Array[Char], length: Int): Unit = {
+  def urlify_2(arr: Array[Char], length: Int): Unit = {
     val arr2 = arr
       .mkString
       .trim
@@ -39,7 +39,7 @@ object E03_Urlify {
     *
     * Long and hard to read, but O(n) time and O(1) space.
     */
-  def urlify3(arr: Array[Char], strLen: Int): Unit = {
+  def urlify_3(arr: Array[Char], strLen: Int): Unit = {
     val arrLen = arr.length
 
     var shift = arrLen - strLen

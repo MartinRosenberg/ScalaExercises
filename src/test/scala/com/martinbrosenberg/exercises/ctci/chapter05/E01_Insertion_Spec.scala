@@ -7,10 +7,10 @@ import com.martinbrosenberg.exercises.ctci.chapter05.E01_Insertion_Spec._
 
 class E01_Insertion_Spec extends CtciBaseSpec {
 
-  s"`${nameOf(insert1 _)}` should correctly insert" - {
+  s"`${nameOf(insert_1 _)}` should correctly insert" - {
     for (TestCase(n, m, i, j, res) <- testCases) {
       f"${m.toBinaryString} into ${n.toBinaryString} in bits $i to $j" in {
-        insert1(n, m, i, j) shouldBe res
+        insert_1(n, m, i, j) shouldBe res
       }
     }
   }

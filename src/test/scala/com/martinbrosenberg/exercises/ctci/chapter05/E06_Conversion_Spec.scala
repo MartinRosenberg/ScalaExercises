@@ -32,8 +32,8 @@ object E06_Conversion_Spec {
   )
 
   private val functions: Seq[(String, (Int, Int) => Int)] = Seq(
-    nameOf(numDifferentBits1 _) -> numDifferentBits1,
-    nameOf(numDifferentBits2 _) -> numDifferentBits2,
+    nameOf(numDifferentBits_1 _) -> numDifferentBits_1,
+    nameOf(numDifferentBits_2 _) -> numDifferentBits_2,
   )
 
 }

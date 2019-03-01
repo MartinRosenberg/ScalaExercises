@@ -14,17 +14,17 @@ object E01_IsUnique {
     * The simplest possible Scala to do this. Compare the original string
     * directly with a copy of that string sans duplicate characters.
     */
-  def isUnique1(s: String): Boolean =
+  def isUnique_1(s: String): Boolean =
     s == s.distinct
 
   /** Constraints: You can't use `SeqLike#distinct`, as it is not built in in
     *   most languages.
     *
-    * Not substantially different from `isUnique1`. Because the collection
+    * Not substantially different from `isUnique_1`. Because the collection
     * without duplicates is no longer the same type as the input, it's easier to
     * just compare the sizes of the collections.
     */
-  def isUnique2(s: String): Boolean =
+  def isUnique_2(s: String): Boolean =
     s.length == s.toSet.size
 
   /** Constraints: You must detect duplicate characters manually instead of
@@ -35,7 +35,7 @@ object E01_IsUnique {
     * each value (i.e. the number of instances of each character) and returns
     * false as soon as it finds any groups > 1, or true at the end.
     */
-  def isUnique3(s: String): Boolean =
+  def isUnique_3(s: String): Boolean =
     s
       .groupBy(identity)
       .forall { case (_, cs) => cs.length == 1 }
@@ -52,7 +52,7 @@ object E01_IsUnique {
     * it's difficult to read; it returns early, which is generally to be avoided
     * in Scala; and it uses excessive space for full Unicode (up to 0x10FFFF).
     */
-  def isUnique4(s: String): Boolean = {
+  def isUnique_4(s: String): Boolean = {
     val cs = new util.BitSet()
     for (c <- s) {
       if (cs.get(c)) return false
@@ -70,7 +70,7 @@ object E01_IsUnique {
     * This also has the early return and Unicode issues; additionally, it is
     * also extremely _slow_ for Unicode.
     */
-  def isUnique5(s: String): Boolean = {
+  def isUnique_5(s: String): Boolean = {
     var cs = Array.fill(256)(false)
     for (c <- s) {
       if (c > cs.length) cs = cs.padTo(c, false)
@@ -88,7 +88,7 @@ object E01_IsUnique {
     *
     * Has the early return issue, and is `O(n^2)`.
     */
-  def isUnique6(s: String): Boolean = {
+  def isUnique_6(s: String): Boolean = {
     val len = s.length
     for (i <- 0 until len;
          k <- i until len) {

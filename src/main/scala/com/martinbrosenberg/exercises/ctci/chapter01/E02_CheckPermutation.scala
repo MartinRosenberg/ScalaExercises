@@ -14,7 +14,7 @@ object E02_CheckPermutation {
     *
     * O(n log n) time.
     */
-  def isPermutation1(s1: String, s2: String): Boolean =
+  def isPermutation_1(s1: String, s2: String): Boolean =
     if (s1 == s2) true
     else if (s1.length != s2.length) false
     else s1.sorted == s2.sorted
@@ -24,7 +24,7 @@ object E02_CheckPermutation {
     * After doing the same sanity checks, counts all the characters in `s1`,
     * subtracts the counts from `s2`, and checks for parity.
     */
-  def isPermutation2(s1: String, s2: String): Boolean =
+  def isPermutation_2(s1: String, s2: String): Boolean =
     if (s1 == s2) true
     else if (s1.length != s2.length) false
     else {

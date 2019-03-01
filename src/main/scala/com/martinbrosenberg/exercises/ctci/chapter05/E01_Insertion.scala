@@ -15,7 +15,7 @@ object E01_Insertion {
     * bits in the range (i, j), then shifts `m` over to that range, and uses `|`
     * to add it.
     */
-  def insert1(n: Int, m: Int, i: Int, j: Int): Int = {
+  def insert_1(n: Int, m: Int, i: Int, j: Int): Int = {
     val cleared = BitOps.clearBitsBetween(n, j, i)
     val mask = m << i
     cleared | mask

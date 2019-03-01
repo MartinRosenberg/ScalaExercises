@@ -7,10 +7,10 @@ import com.martinbrosenberg.exercises.ctci.chapter01.E09_StringRotation_Spec._
 
 class E09_StringRotation_Spec extends CtciBaseSpec {
 
-  s"`${nameOf(isRotation1 _)}` should correctly determine whether" - {
+  s"`${nameOf(isRotation_1 _)}` should correctly determine whether" - {
     for (TestCase(s1, s2, isRotation) <- testCases) {
       s"'$s1' is a rotation of '$s2'" in {
-        isRotation1(s1, s2) shouldBe isRotation
+        isRotation_1(s1, s2) shouldBe isRotation
       }
     }
   }

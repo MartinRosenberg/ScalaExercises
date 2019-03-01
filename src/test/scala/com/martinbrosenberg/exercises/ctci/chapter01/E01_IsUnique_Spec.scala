@@ -31,12 +31,12 @@ object E01_IsUnique_Spec {
   )
 
   private val functions = Seq[(String, String => Boolean)](
-    nameOf(isUnique1 _) -> isUnique1,
-    nameOf(isUnique2 _) -> isUnique2,
-    nameOf(isUnique3 _) -> isUnique3,
-    nameOf(isUnique4 _) -> isUnique4,
-    nameOf(isUnique5 _) -> isUnique5,
-    nameOf(isUnique6 _) -> isUnique6,
+    nameOf(isUnique_1 _) -> isUnique_1,
+    nameOf(isUnique_2 _) -> isUnique_2,
+    nameOf(isUnique_3 _) -> isUnique_3,
+    nameOf(isUnique_4 _) -> isUnique_4,
+    nameOf(isUnique_5 _) -> isUnique_5,
+    nameOf(isUnique_6 _) -> isUnique_6,
   )
 
 }

@@ -10,7 +10,7 @@ object E06_Conversion {
   /** Diffs a and b (using XOR), then iterates from the lowest bit to the
     * highest significant bit, counting all the ones.
     */
-  def numDifferentBits1(a: Int, b: Int): Int = {
+  def numDifferentBits_1(a: Int, b: Int): Int = {
     var diff = a ^ b
     var count = 0
     while (diff != 0) {
@@ -21,7 +21,7 @@ object E06_Conversion {
   }
 
   /** Does the same, but using a `Stream`, a more functional approach. */
-  def numDifferentBits2(a: Int, b: Int): Int = {
+  def numDifferentBits_2(a: Int, b: Int): Int = {
     def bits(diff: Int): Stream[Int] = diff #:: bits(diff >>> 1)
     bits(a ^ b)
       .takeWhile(_ != 0)

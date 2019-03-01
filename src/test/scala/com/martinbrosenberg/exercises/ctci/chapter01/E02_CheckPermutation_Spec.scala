@@ -33,8 +33,8 @@ object E02_CheckPermutation_Spec {
   )
 
   private val functions = Seq[(String, (String, String) => Boolean)](
-    nameOf(isPermutation1 _) -> isPermutation1,
-    nameOf(isPermutation2 _) -> isPermutation2,
+    nameOf(isPermutation_1 _) -> isPermutation_1,
+    nameOf(isPermutation_2 _) -> isPermutation_2,
   )
 
 }

@@ -36,7 +36,7 @@ object E04_PalindromePermutation_Spec {
   )
 
   private val functions: Seq[(String, String => Boolean)] = Seq(
-    nameOf(isPalindromePermutation1 _) -> isPalindromePermutation1,
+    nameOf(isPalindromePermutation_1 _) -> isPalindromePermutation_1,
   )
 
 }

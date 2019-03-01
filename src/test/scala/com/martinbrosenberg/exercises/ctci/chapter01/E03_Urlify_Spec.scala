@@ -40,12 +40,12 @@ object E03_Urlify_Spec {
   )
 
   private val outOfPlaceFunctions: Seq[(String, String => String)] = Seq(
-    nameOf(urlify1 _) -> urlify1,
+    nameOf(urlify_1 _) -> urlify_1,
   )
 
   private val inPlaceFunctions: Seq[(String, (Array[Char], Int) => Unit)] = Seq(
-    nameOf(urlify2 _) -> urlify2,
-    nameOf(urlify3 _) -> urlify3,
+    nameOf(urlify_2 _) -> urlify_2,
+    nameOf(urlify_3 _) -> urlify_3,
   )
 
 }

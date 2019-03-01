@@ -20,7 +20,7 @@ object E04_PalindromePermutation {
     * of whether each character has a twin, and if more than one doesn't, it's
     * not a palindrome. O(n) time and space.
     */
-  def isPalindromePermutation1(s: String): Boolean =
+  def isPalindromePermutation_1(s: String): Boolean =
     s
       .toLowerCase
       .replaceAll("""[^\d\p{L}]""", "")

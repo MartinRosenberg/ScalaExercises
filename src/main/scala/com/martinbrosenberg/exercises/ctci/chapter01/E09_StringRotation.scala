@@ -15,7 +15,7 @@ object E09_StringRotation {
     * length, to ensure one isn't an *incomplete* rotation (e.g. a proper
     * substring). Scala also has string multiplication built in.
     */
-  def isRotation1(s1: String, s2: String): Boolean =
+  def isRotation_1(s1: String, s2: String): Boolean =
     s1.length == s2.length && (s1 * 2).contains(s2)
 
 }
