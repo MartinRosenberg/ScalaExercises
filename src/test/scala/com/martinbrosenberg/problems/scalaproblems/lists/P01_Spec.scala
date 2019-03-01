@@ -1,8 +1,8 @@
-package com.martinbrosenberg.problems.scalaproblems
+package com.martinbrosenberg.problems.scalaproblems.lists
 
 import com.martinbrosenberg.problems.BaseSpec
-import com.martinbrosenberg.problems.scalaproblems.P01._
-import com.martinbrosenberg.problems.scalaproblems.P01_Spec._
+import com.martinbrosenberg.problems.scalaproblems.lists.P01._
+import com.martinbrosenberg.problems.scalaproblems.lists.P01_Spec._
 
 class P01_Spec extends BaseSpec {
 

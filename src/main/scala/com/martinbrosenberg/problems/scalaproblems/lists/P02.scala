@@ -1,4 +1,4 @@
-package com.martinbrosenberg.problems.scalaproblems
+package com.martinbrosenberg.problems.scalaproblems.lists
 
 import scala.annotation.tailrec
 
