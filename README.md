@@ -13,4 +13,4 @@ Every exercise is tested using [ScalaTest](https://github.com/scalatest/scalates
 
 ## Roadmap
 
-* [ ] Add [SleepSort](https://github.com/MartinRosenberg/ScalaBits/blob/master/src/main/scala-2.12/com/martinbrosenberg/bits/SleepSort.scala)
+* [ ] Fix [SleepSort](src/main/scala/com/martinbrosenberg/exercises/rosettacode/SleepSort.scala) [tests](src/test/scala/com/martinbrosenberg/exercises/rosettacode/SleepSort_Spec.scala)
