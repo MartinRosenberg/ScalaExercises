@@ -6,6 +6,7 @@ Every exercise is tested using [ScalaTest](https://github.com/scalatest/scalates
 
 ## Exercises by source
 
+* **Coders' Workshop** ([exercises](src/main/scala/com/martinbrosenberg/exercises/codersworkshop) | [tests](src/test/scala/com/martinbrosenberg/exercises/codersworkshop) | [website](https://github.com/andy-young/Coders-Workshop))
 * **_Cracking the Coding Interview_** ([exercises](src/main/scala/com/martinbrosenberg/exercises/ctci) | [tests](src/test/scala/com/martinbrosenberg/exercises/ctci) | [official Java answers](https://github.com/careercup/CtCI-6th-Edition/tree/master/Java) | [website](http://www.crackingthecodinginterview.com/))
 * **HackerRank** ([exercises](src/main/scala/com/martinbrosenberg/exercises/hackerrank) | [tests](src/test/scala/com/martinbrosenberg/exercises/hackerrank) | [website](https://www.hackerrank.com/))
 * **LeetCode** ([exercises](src/main/scala/com/martinbrosenberg/exercises/leetcode) | [tests](src/test/scala/com/martinbrosenberg/exercises/leetcode) | [website](https://leetcode.com/))
