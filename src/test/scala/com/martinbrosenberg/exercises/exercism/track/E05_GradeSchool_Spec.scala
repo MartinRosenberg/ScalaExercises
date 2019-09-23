@@ -3,8 +3,8 @@ package com.martinbrosenberg.exercises.exercism.track
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
 
 /** @version created manually */
-class E04_GradeSchool_Spec extends ExercismBaseSpec {
-  val school = new E04_GradeSchool
+class E05_GradeSchool_Spec extends ExercismBaseSpec {
+  val school = new E05_GradeSchool
 
   test ("empty school") {
     school.db should be (Map())

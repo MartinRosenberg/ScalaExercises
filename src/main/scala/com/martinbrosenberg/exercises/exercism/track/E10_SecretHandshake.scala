@@ -26,7 +26,7 @@ package com.martinbrosenberg.exercises.exercism.track
   * "wink"] because 19 is 10011 in binary. Notice that the addition of 16 (10000
   * in binary) has caused the array to be reversed.
   */
-object E09_SecretHandshake {
+object E10_SecretHandshake {
 
   private object Component extends Enumeration {
     type Component = Value

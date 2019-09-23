@@ -1,10 +1,10 @@
 package com.martinbrosenberg.exercises.exercism.track
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
-import com.martinbrosenberg.exercises.exercism.track.E08_Robot.{Bearing, Robot}
+import com.martinbrosenberg.exercises.exercism.track.E09_Robot.{Bearing, Robot}
 
 /** @version 2.2.0 */
-class E08_Robot_Spec extends ExercismBaseSpec {
+class E09_Robot_Spec extends ExercismBaseSpec {
 
   test(
     "A robot is created with a position and a direction - Robots are created with a position and direction") {

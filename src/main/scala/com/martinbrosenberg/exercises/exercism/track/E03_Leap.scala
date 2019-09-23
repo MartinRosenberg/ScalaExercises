@@ -16,7 +16,7 @@ package com.martinbrosenberg.exercises.exercism.track
   * If your language provides a method in the standard library that does this
   * look-up, pretend it doesn't exist and implement it yourself.
   */
-object E02_Leap {
+object E03_Leap {
 
   def leapYear(year: Int): Boolean =
     year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)

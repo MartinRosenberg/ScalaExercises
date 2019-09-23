@@ -13,7 +13,7 @@ package com.martinbrosenberg.exercises.exercism.track
   *   anything.
   * - He answers 'Whatever.' to anything else.
   */
-object E05_Bob {
+object E06_Bob {
 
   private def isQuestion(s: String): Boolean = s.endsWith("?")
   private def isSilence(s: String): Boolean = s == ""
