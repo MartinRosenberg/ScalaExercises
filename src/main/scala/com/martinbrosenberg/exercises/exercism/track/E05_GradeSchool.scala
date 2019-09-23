@@ -38,7 +38,7 @@ import scala.collection.immutable.TreeMap
   * Then please share your thoughts in a comment on the submission. Did this
   * experiment make the code better? Worse? Did you learn anything from it?
   */
-class E04_GradeSchool {
+class E05_GradeSchool {
 
   type Grade = Int
   type Roster = Seq[String]

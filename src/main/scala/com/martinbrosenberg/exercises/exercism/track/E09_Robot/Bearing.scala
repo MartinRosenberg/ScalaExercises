@@ -1,4 +1,4 @@
-package com.martinbrosenberg.exercises.exercism.track.E08_Robot
+package com.martinbrosenberg.exercises.exercism.track.E09_Robot
 
 import Direction._
 

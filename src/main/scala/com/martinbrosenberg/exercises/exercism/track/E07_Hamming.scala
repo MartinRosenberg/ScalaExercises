@@ -39,7 +39,7 @@ package com.martinbrosenberg.exercises.exercism.track
   * means that based on the definition, each language could deal with getting
   * sequences of equal length differently.
   */
-object E06_Hamming {
+object E07_Hamming {
 
   def distance(a: String, b: String): Option[Int] =
     if (a.length != b.length) None

@@ -47,7 +47,7 @@ package com.martinbrosenberg.exercises.exercism.track
   * scored at 2 in the Māori-language version of the game while being scored at
   * 4 in the Hawaiian-language version.
   */
-object E07_Etl {
+object E08_Etl {
 
   type Letter = String
   type Score = Int

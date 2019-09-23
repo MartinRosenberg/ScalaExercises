@@ -19,7 +19,7 @@ package com.martinbrosenberg.exercises.exercism.track
   * If you're wondering why Pluto didn't make the cut, go watch this YouTube
   * video: [[http://www.youtube.com/watch?v=Z_2gbGXzFbs]].
   */
-object E03_SpaceAge {
+object E04_SpaceAge {
 
   private final val EarthYear = 31557600
 
