@@ -1,6 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.side
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.exercism.side._Series.Series
 
 /** @version created manually */
 class Series_Spec extends ExercismBaseSpec {

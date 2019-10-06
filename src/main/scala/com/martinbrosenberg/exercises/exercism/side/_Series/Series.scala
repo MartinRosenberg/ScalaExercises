@@ -1,4 +1,4 @@
-package com.martinbrosenberg.exercises.exercism.side
+package com.martinbrosenberg.exercises.exercism.side._Series
 
 /** SERIES
   *
