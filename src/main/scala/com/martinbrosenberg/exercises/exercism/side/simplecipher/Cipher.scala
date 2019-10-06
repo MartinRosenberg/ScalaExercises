@@ -17,7 +17,7 @@ case class Cipher private(key: String) {
 
 }
 
-private object Cipher {
+object Cipher {
 
   final val AlphaSize = 26
   final val Offset = 'a'
