@@ -1,6 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.side
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.exercism.side.palindromeproducts.PalindromeProducts
 
 /** @version 1.1.0 */
 class PalindromeProducts_Spec extends ExercismBaseSpec {

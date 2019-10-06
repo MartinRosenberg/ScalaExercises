@@ -1,6 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.side
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.exercism.side.pangram.Pangram
 
 /** @version 1.4.0 */
 class Pangram_Spec extends ExercismBaseSpec {

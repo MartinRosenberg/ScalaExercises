@@ -1,7 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.side
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
-import com.martinbrosenberg.exercises.exercism.side._SaddlePoints.Matrix
+import com.martinbrosenberg.exercises.exercism.side.saddlepoints.Matrix
 
 /** @version 1.1.0 */
 class SaddlePoints_Spec extends ExercismBaseSpec {

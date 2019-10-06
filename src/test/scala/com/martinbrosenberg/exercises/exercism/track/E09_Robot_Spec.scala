@@ -1,7 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.track
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
-import com.martinbrosenberg.exercises.exercism.track.E09_Robot.{Bearing, Robot}
+import com.martinbrosenberg.exercises.exercism.track.e09_robotsimulator.{Bearing, Robot}
 
 /** @version 2.2.0 */
 class E09_Robot_Spec extends ExercismBaseSpec {

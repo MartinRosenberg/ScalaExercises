@@ -1,6 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.side
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.exercism.side.sieve.Sieve
 
 /** @version 1.1.0 */
 class Sieve_Spec extends ExercismBaseSpec {

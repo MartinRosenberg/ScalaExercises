@@ -1,6 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.side
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.exercism.side.differenceofsquares.DifferenceOfSquares
 
 /** @version 1.2.0 */
 class DifferenceOfSquares_Spec extends ExercismBaseSpec {
