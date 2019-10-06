@@ -1,7 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.side
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
-import com.martinbrosenberg.exercises.exercism.side._KindergartenGarden.{Garden, Plant}
+import com.martinbrosenberg.exercises.exercism.side.kindergartengarden.{Garden, Plant}
 
 /** @version 1.1.1 */
 class KindergartenGarden_Spec extends ExercismBaseSpec {

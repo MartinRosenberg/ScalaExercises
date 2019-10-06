@@ -1,7 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.side
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
-import com.martinbrosenberg.exercises.exercism.side._PerfectNumbers.{NumberType, PerfectNumbers}
+import com.martinbrosenberg.exercises.exercism.side.perfectnumbers.{NumberType, PerfectNumbers}
 
 /** @version 1.1.0 */
 class PerfectNumbers_Spec extends ExercismBaseSpec {

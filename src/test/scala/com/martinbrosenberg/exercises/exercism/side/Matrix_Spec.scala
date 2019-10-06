@@ -1,7 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.side
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
-import com.martinbrosenberg.exercises.exercism.side._Matrix.Matrix
+import com.martinbrosenberg.exercises.exercism.side.matrix.Matrix
 
 /** @version 1.0.0 */
 class Matrix_Spec extends ExercismBaseSpec {

@@ -1,6 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.side
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.exercism.side.isogram.Isogram
 
 /** @version 1.4.0 */
 class Isogram_Spec extends ExercismBaseSpec {

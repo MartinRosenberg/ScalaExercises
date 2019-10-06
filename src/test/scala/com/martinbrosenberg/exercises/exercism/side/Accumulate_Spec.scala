@@ -1,6 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.side
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.exercism.side.accumulate.Accumulate
 
 /** @version created manually */
 class Accumulate_Spec extends ExercismBaseSpec {

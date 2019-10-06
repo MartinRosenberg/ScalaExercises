@@ -1,7 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.side
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
-import com.martinbrosenberg.exercises.exercism.side._LargestSeriesProduct.Series
+import com.martinbrosenberg.exercises.exercism.side.largestseriesproduct.Series
 
 /** @version 1.1.0 */
 class LargestSeriesProduct_Spec extends ExercismBaseSpec {

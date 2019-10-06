@@ -4,6 +4,7 @@ import java.time.{LocalDate, LocalDateTime}
 import java.time.format.DateTimeFormatter
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.exercism.side.gigasecond.Gigasecond
 
 /** @version 1.1.0 */
 class Gigasecond_Spec extends ExercismBaseSpec {

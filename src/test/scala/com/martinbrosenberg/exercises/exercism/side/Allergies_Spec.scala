@@ -1,7 +1,7 @@
 package com.martinbrosenberg.exercises.exercism.side
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
-import com.martinbrosenberg.exercises.exercism.side._Allergies.{Allergen, Allergies}
+import com.martinbrosenberg.exercises.exercism.side.allergies.{Allergen, Allergies}
 
 /** @version 1.2.0 */
 class Allergies_Spec extends ExercismBaseSpec {
