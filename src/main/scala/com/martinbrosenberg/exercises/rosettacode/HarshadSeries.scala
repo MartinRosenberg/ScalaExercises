@@ -22,8 +22,8 @@ package com.martinbrosenberg.exercises.rosettacode
   */
 object HarshadSeries {
 
-  val harshads: Stream[Int] =
-    Stream.from(1)
+  val harshads: LazyList[Int] =
+    LazyList.from(1)
       .filter(i => i % i.toString.map(_.asDigit).sum == 0)
 
   /** Constraints: None. */

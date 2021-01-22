@@ -2,7 +2,6 @@ package com.martinbrosenberg.exercises.exercism.track
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
 import com.martinbrosenberg.exercises.exercism.track.e04_spaceage.SpaceAge
-import org.scalatest.{FunSuite, Matchers}
 
 /** @version 1.1.0 */
 class E04_SpaceAge_Spec extends ExercismBaseSpec {

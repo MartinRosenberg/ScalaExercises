@@ -1,5 +1,5 @@
 package com.martinbrosenberg.exercises
 
-import org.scalatest.FreeSpec
+import org.scalatest.freespec.AnyFreeSpec
 
-class BaseSpec extends FreeSpec
+class BaseSpec extends AnyFreeSpec

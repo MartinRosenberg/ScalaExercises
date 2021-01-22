@@ -1,10 +1,11 @@
 package com.martinbrosenberg.exercises.exercism.track
 
 import com.martinbrosenberg.exercises.exercism.track.e06_bob.Bob
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
 
 /** @version 1.4.0 */
-class E06_Bob_Spec extends FunSuite with Matchers {
+class E06_Bob_Spec extends AnyFunSuite with Matchers {
 
   test("stating something") {
     Bob.response("Tom-ay-to, tom-aaaah-to.") should be("Whatever.")

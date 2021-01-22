@@ -2,7 +2,7 @@ package com.martinbrosenberg.exercises.exercism.side.grains
 
 object Grains {
 
-  private val squares: Stream[BigInt] = BigInt(1) #:: squares.map(_ * 2)
+  private val squares: LazyList[BigInt] = BigInt(1) #:: squares.map(_ * 2)
 
   def square(n: Int): Option[BigInt] =
     if (n <= 0 || n > 64) None

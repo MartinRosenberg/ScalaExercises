@@ -26,5 +26,4 @@ class E02_TwoFer_Spec extends ExercismBaseSpec {
     Twofer.twofer("Bob") should be ("One for Bob, one for me.")
   }
 
-
 }

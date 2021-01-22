@@ -17,7 +17,7 @@ object E002_EvenFibonacciNumbers {
   /** @author Luigi Plinge
     * @see [[http://www.luigip.com/?p=200]]
     */
-  val fibs: Stream[Long] = 0 #:: fibs.scanLeft(1L)(_ + _)
+  val fibs: LazyList[Long] = 0 #:: fibs.scanLeft(1L)(_ + _)
 
   /** Constraints: None.
     *
@@ -35,7 +35,7 @@ object E002_EvenFibonacciNumbers {
     *
     * 0, 2, 8, 34, 144, 610, 2584, 10946, 46368, 196418, 832040
     */
-  val evenFibs: Stream[Long] = 0 #:: evenFibs.scanLeft(2L)(4 * _ + _)
+  val evenFibs: LazyList[Long] = 0 #:: evenFibs.scanLeft(2L)(4 * _ + _)
 
   /** Constraints: Only calculate the even numbers.
     *

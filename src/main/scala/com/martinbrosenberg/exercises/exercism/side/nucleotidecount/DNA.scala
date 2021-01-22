@@ -6,7 +6,7 @@ class DNA(strand: String) {
 
   val nucleotideCounts: Either[String, Map[Char, Int]] =
     if (strand.forall(Nucleotides.contains)) Right(
-      Nucleotides.map(_ -> 0) ++: strand.groupBy(identity).mapValues(_.length)
+      (Nucleotides.map(_ -> 0) ++ strand.groupBy(identity).view.mapValues(_.length)).toMap
     )
     else Left("Strand contains invalid nucleotides")
 

@@ -20,6 +20,7 @@ object SecretHandshake {
       .filter(hasComponent)
       .sortWith { case (a, b) => if (hasComponent(Reverse)) a > b else a < b }
       .map(_.toString)
+      .toIndexedSeq
   }
 
 }

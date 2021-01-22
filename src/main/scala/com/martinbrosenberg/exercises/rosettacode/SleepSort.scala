@@ -30,7 +30,7 @@ object SleepSort {
   @throws[IllegalArgumentException]("if any element of nums is negative")
   def sort(nums: Seq[Int], dispFn: Any => Unit = Console.println): Unit =
     nums.foreach(n => new Thread {
-      override def run() {
+      override def run(): Unit = {
         Thread.sleep(n * WaitCoefficient)
         dispFn(n)
       }

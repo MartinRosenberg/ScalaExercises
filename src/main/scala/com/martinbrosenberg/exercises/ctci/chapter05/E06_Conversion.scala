@@ -22,7 +22,7 @@ object E06_Conversion {
 
   /** Does the same, but using a `Stream`, a more functional approach. */
   def numDifferentBits_2(a: Int, b: Int): Int = {
-    def bits(diff: Int): Stream[Int] = diff #:: bits(diff >>> 1)
+    def bits(diff: Int): LazyList[Int] = diff #:: bits(diff >>> 1)
     bits(a ^ b)
       .takeWhile(_ != 0)
       .count(x => (x & 1) == 1)

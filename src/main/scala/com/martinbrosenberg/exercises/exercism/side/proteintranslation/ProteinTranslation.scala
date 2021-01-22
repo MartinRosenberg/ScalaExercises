@@ -26,7 +26,7 @@ object ProteinTranslation {
     case "GAA" | "GAG" => "Glutamic acid"
     case "UGU" | "UGC" => "Cysteine"
     case "UGG" => "Tryptophan"
-    case "CCU" | "CCC" | "CCA" | "CCG" | "AGA" | "AGG" => "Arginine"
+    case "CGU" | "CGC" | "CGA" | "CGG" | "AGA" | "AGG" => "Arginine"
     case "GGU" | "GGC" | "GGA" | "GGG" => "Glycine"
   }
 

@@ -16,6 +16,6 @@ package com.martinbrosenberg.exercises.codersworkshop
 object CountWords {
 
   def countWords(s: String): Map[String, Int] =
-    s.split(' ').groupBy(identity).mapValues(_.length)
+    s.split(' ').groupBy(identity).view.mapValues(_.length).toMap
 
 }
