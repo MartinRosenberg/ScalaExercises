@@ -9,4 +9,5 @@ lazy val root = (project in file("."))
       "org.scalacheck"      %% "scalacheck"   % "1.15.2" % "test",
       "org.scalatest"       %% "scalatest"    % "3.2.3"  % "test",
     ),
+    testFrameworks += TestFrameworks.ScalaTest
   )
