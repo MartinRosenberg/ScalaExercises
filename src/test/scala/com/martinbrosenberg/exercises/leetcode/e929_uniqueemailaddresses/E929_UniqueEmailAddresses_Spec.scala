@@ -1,11 +1,11 @@
-package com.martinbrosenberg.exercises.leetcode
+package com.martinbrosenberg.exercises.leetcode.e929_uniqueemailaddresses
 
 import com.github.dwickern.macros.NameOf._
 import com.martinbrosenberg.exercises.BaseSpec
-import com.martinbrosenberg.exercises.leetcode.E0929_UniqueEmailAddresses._
-import com.martinbrosenberg.exercises.leetcode.E0929_UniqueEmailAddresses_Spec._
+import com.martinbrosenberg.exercises.leetcode.e929_uniqueemailaddresses.E929_UniqueEmailAddresses_Spec.{TestCase, functions, testCases}
+import com.martinbrosenberg.exercises.leetcode.e929_uniqueemaildddresses.E929_UniqueEmailAddresses._
 
-class E0929_UniqueEmailAddresses_Spec extends BaseSpec {
+class E929_UniqueEmailAddresses_Spec extends BaseSpec {
 
   for ((fnName, numUniqueEmails) <- functions) {
     s"Using function $fnName" - {
@@ -19,7 +19,7 @@ class E0929_UniqueEmailAddresses_Spec extends BaseSpec {
 
 }
 
-object E0929_UniqueEmailAddresses_Spec {
+object E929_UniqueEmailAddresses_Spec {
 
   private case class TestCase(emails: Seq[String], unique: Int)
 
