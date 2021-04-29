@@ -1,6 +1,6 @@
 package com.martinbrosenberg.exercises.codewars
 
-import scala.util.{Failure, Success, Try}
+import scala.util.Try
 
 /** Write a function, which takes a non-negative integer (seconds) as input and
   * returns the time in a human-readable format (HH:MM:SS)
@@ -15,15 +15,14 @@ import scala.util.{Failure, Success, Try}
   */
 object HumanReadableTime {
 
-  def format(seconds: Int): Try[String] =
-    if (seconds >= 0) Success {
-      val s = seconds % 60
-      val minutes = seconds / 60
-      val m = minutes % 60
-      val h = minutes / 60
-      f"$h%02d:$m%02d:$s%02d"
-    } else Failure {
-      new IllegalArgumentException("Seconds must be non-negative")
-    }
+  def format(seconds: Int): Try[String] = Try {
+    require(seconds >= 0, "Cannot format negative durations.")
+
+    val s = seconds % 60
+    val minutes = seconds / 60
+    val m = minutes % 60
+    val h = minutes / 60
+    f"$h%02d:$m%02d:$s%02d"
+  }
 
 }
