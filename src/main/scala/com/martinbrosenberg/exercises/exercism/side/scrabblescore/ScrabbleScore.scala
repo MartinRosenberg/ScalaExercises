@@ -3,7 +3,7 @@ package com.martinbrosenberg.exercises.exercism.side.scrabblescore
 object ScrabbleScore {
 
   @throws[MatchError]("if not an English letter")
-  private val letters: Char => Int = {
+  private def letters(c: Char): Int = c match {
     case 'A' | 'E' | 'I' | 'O' | 'U' | 'L' | 'N' | 'R' | 'S' | 'T' => 1
     case 'D' | 'G' => 2
     case 'B' | 'C' | 'M' | 'P' => 3
