@@ -3,7 +3,7 @@ lazy val root = (project in file("."))
     organization := "com.martinbrosenberg",
     name := "ScalaExercises",
     version := "0.0.1-SNAPSHOT",
-    scalaVersion := "2.13.4",
+    scalaVersion := "2.13.5",
     libraryDependencies ++= Seq(
       "com.github.dwickern" %% "scala-nameof" % "2.0.0"  % "provided",
       "org.scalacheck"      %% "scalacheck"   % "1.15.2" % "test",
