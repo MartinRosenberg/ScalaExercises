@@ -1,19 +1,20 @@
 package com.martinbrosenberg.exercises.exercism.track.e04_spaceage
 
 object SpaceAge {
+  type Seconds = Double
+  type PlanetYears = Double
 
-  private final val EarthYear = 31557600
+  private final val SecondsPerEarthYear = 31557600
 
-  private def age(seconds: Double, orbitalPeriod: Double = 1): Double =
-    seconds / (orbitalPeriod * EarthYear)
+  private def age(orbitalPeriod: Double)(seconds: Seconds): PlanetYears =
+    seconds / (orbitalPeriod * SecondsPerEarthYear)
 
-  def onMercury(seconds: Double): Double = age(seconds, 0.2408467)
-  def onVenus  (seconds: Double): Double = age(seconds, 0.61519726)
-  def onEarth  (seconds: Double): Double = age(seconds)
-  def onMars   (seconds: Double): Double = age(seconds, 1.8808158)
-  def onJupiter(seconds: Double): Double = age(seconds, 11.862615)
-  def onSaturn (seconds: Double): Double = age(seconds, 29.447498)
-  def onUranus (seconds: Double): Double = age(seconds, 84.016846)
-  def onNeptune(seconds: Double): Double = age(seconds, 164.79132)
-
+  val onMercury: Seconds => PlanetYears = age(0.2408467)
+  val onVenus:   Seconds => PlanetYears = age(0.61519726)
+  val onEarth:   Seconds => PlanetYears = age(1)
+  val onMars:    Seconds => PlanetYears = age(1.8808158)
+  val onJupiter: Seconds => PlanetYears = age(11.862615)
+  val onSaturn:  Seconds => PlanetYears = age(29.447498)
+  val onUranus:  Seconds => PlanetYears = age(84.016846)
+  val onNeptune: Seconds => PlanetYears = age(164.79132)
 }
