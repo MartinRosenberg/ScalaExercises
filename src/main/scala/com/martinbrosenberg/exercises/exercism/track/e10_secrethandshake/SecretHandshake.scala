@@ -1,26 +1,18 @@
 package com.martinbrosenberg.exercises.exercism.track.e10_secrethandshake
 
 object SecretHandshake {
+  private final val Reverse = 16
+  private final val Components = Map(
+    1 -> "wink",
+    2 -> "double blink",
+    4 -> "close your eyes",
+    8 -> "jump"
+  )
 
-  private object Component extends Enumeration {
-    type Component = Value
-
-    val Wink = Value(1, "wink")
-    val DoubleBlink = Value(2, "double blink")
-    val CloseEyes = Value(4, "close your eyes")
-    val Jump = Value(8, "jump")
-    val Reverse = Value(16)
+  def commands(sequence: Int): List[String] = {
+    def hasComponent(bit: Int): Boolean = (sequence & bit) == bit
+    val usedComponents = Components.view.filterKeys(hasComponent).values.toList
+    if (hasComponent(Reverse)) usedComponents.reverse else usedComponents
   }
-
-  import Component._
-
-  def commands(code: Int): Seq[String] = {
-    val hasComponent = (cmp: Component) => (code & cmp.id) == cmp.id
-    Component.values.toArray.init
-      .filter(hasComponent)
-      .sortWith { case (a, b) => if (hasComponent(Reverse)) a > b else a < b }
-      .map(_.toString)
-      .toIndexedSeq
-  }
-
 }
+
