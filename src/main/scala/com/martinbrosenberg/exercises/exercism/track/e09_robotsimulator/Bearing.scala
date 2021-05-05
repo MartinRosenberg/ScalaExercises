@@ -1,17 +1,13 @@
 package com.martinbrosenberg.exercises.exercism.track.e09_robotsimulator
 
-import Direction._
+sealed class Bearing(_left: => Bearing, _right: => Bearing) {
+  lazy val left: Bearing = _left
+  lazy val right: Bearing = _right
+}
 
-object Bearing extends Enumeration {
-  type Bearing = Value
-
-  val North, East, South, West = Value
-
-  def apply(bearing: Bearing, dir: Direction): Bearing =
-    Bearing(bearing.id + dir.id match {
-      case -1 => 3
-      case  4 => 0
-      case  n => n
-    })
-
+object Bearing {
+  lazy val North: Bearing = new Bearing(West,  East)
+  lazy val East:  Bearing = new Bearing(North, South)
+  lazy val South: Bearing = new Bearing(East,  West)
+  lazy val West:  Bearing = new Bearing(South, North)
 }

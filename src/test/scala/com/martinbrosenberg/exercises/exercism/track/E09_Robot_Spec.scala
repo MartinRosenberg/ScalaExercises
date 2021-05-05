@@ -48,7 +48,6 @@ class E09_Robot_Spec extends ExercismBaseSpec {
 
   test(
     "rotates the robot's direction 90 degrees counter-clockwise - changes the direction from north to west") {
-    pending
     Robot(Bearing.North, (0, 0)).turnLeft.bearing should be(Bearing.West)
   }
 
@@ -100,7 +99,6 @@ class E09_Robot_Spec extends ExercismBaseSpec {
 
   test(
     "Where R = Turn Right, L = Turn Left and A = Advance, the robot can follow a series of instructions and end up with the correct position and direction - instructions to move west and south") {
-    pending
     Robot(Bearing.East, (2, -7)).simulate("RRAAAAALA") should be(
       Robot(Bearing.South, (-3, -8)))
   }
