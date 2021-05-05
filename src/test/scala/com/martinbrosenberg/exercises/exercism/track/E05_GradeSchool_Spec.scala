@@ -1,11 +1,11 @@
 package com.martinbrosenberg.exercises.exercism.track
 
 import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
-import com.martinbrosenberg.exercises.exercism.track.e05_gradeschool.GradeSchool
+import com.martinbrosenberg.exercises.exercism.track.e05_gradeschool.School
 
 /** @version created manually */
 class E05_GradeSchool_Spec extends ExercismBaseSpec {
-  val school = new GradeSchool
+  val school = new School
 
   test ("empty school") {
     school.db should be (Map())
