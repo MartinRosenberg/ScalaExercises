@@ -3,11 +3,11 @@ lazy val root = (project in file("."))
     organization := "com.martinbrosenberg",
     name := "ScalaExercises",
     version := "0.0.1-SNAPSHOT",
-    scalaVersion := "2.13.5",
+    scalaVersion := "2.13.8",
     libraryDependencies ++= Seq(
-      "com.github.dwickern" %% "scala-nameof" % "2.0.0"  % "provided",
-      "org.scalacheck"      %% "scalacheck"   % "1.15.2" % "test",
-      "org.scalatest"       %% "scalatest"    % "3.2.3"  % "test",
+      "com.github.dwickern" %% "scala-nameof" % "4.0.0"  % "provided",
+      "org.scalacheck"      %% "scalacheck"   % "1.16.0" % "test",
+      "org.scalatest"       %% "scalatest"    % "3.2.13" % "test",
     ),
     testFrameworks += TestFrameworks.ScalaTest
   )
