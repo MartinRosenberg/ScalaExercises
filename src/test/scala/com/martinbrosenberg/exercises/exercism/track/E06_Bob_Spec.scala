@@ -1,133 +1,133 @@
 package com.martinbrosenberg.exercises.exercism.track
 
+import com.martinbrosenberg.exercises.BaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.track.e06_bob.Bob
-import org.scalatest.funsuite.AnyFunSuite
-import org.scalatest.matchers.should.Matchers
 
 /** @version 1.4.0 */
-class E06_Bob_Spec extends AnyFunSuite with Matchers {
+class E06_Bob_Spec extends BaseSpec {
 
-  test("stating something") {
+  "stating something" in {
     Bob.response("Tom-ay-to, tom-aaaah-to.") should be("Whatever.")
   }
 
-  test("shouting") {
+  "shouting" in {
     Bob.response("WATCH OUT!") should
       be("Whoa, chill out!")
   }
 
-  test("shouting gibberish") {
+  "shouting gibberish" in {
     Bob.response("FCECDFCAAB") should
       be("Whoa, chill out!")
   }
 
-  test("asking a question") {
+  "asking a question" in {
     Bob.response("Does this cryogenic chamber make me look fat?") should
       be("Sure.")
   }
 
-  test("asking a numeric question") {
+  "asking a numeric question" in {
     Bob.response("You are, what, like 15?") should
       be("Sure.")
   }
 
-  test("asking gibberish") {
+  "asking gibberish" in {
     Bob.response("fffbbcbeab?") should
       be("Sure.")
   }
 
-  test("talking forcefully") {
+  "talking forcefully" in {
     Bob.response("Let's go make out behind the gym!") should
       be("Whatever.")
   }
 
-  test("using acronyms in regular speech") {
+  "using acronyms in regular speech" in {
     Bob.response("It's OK if you don't want to go to the DMV.") should
       be("Whatever.")
   }
 
-  test("forceful question") {
+  "forceful question" in {
     Bob.response("WHAT THE HELL WERE YOU THINKING?") should
       be("Calm down, I know what I'm doing!")
   }
 
-  test("shouting numbers") {
+  "shouting numbers" in {
     Bob.response("1, 2, 3 GO!") should
       be("Whoa, chill out!")
   }
 
-  test("no letters") {
+  "no letters" in {
     Bob.response("1, 2, 3") should
       be("Whatever.")
   }
 
-  test("question with no letters") {
+  "question with no letters" in {
     Bob.response("4?") should
       be("Sure.")
   }
 
-  test("shouting with special characters") {
+  "shouting with special characters" in {
     Bob.response("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!") should
       be("Whoa, chill out!")
   }
 
-  test("shouting with no exclamation mark") {
+  "shouting with no exclamation mark" in {
     Bob.response("I HATE THE DMV") should
       be("Whoa, chill out!")
   }
 
-  test("statement containing question mark") {
+  "statement containing question mark" in {
     Bob.response("Ending with ? means a question.") should
       be("Whatever.")
   }
 
-  test("non-letters with question") {
+  "non-letters with question" in {
     Bob.response(":) ?") should
       be("Sure.")
   }
 
-  test("prattling on") {
+  "prattling on" in {
     Bob.response("Wait! Hang on. Are you going to be OK?") should
       be("Sure.")
   }
 
-  test("silence") {
+  "silence" in {
     Bob.response("") should
       be("Fine. Be that way!")
   }
 
-  test("prolonged silence") {
+  "prolonged silence" in {
     Bob.response("          ") should
       be("Fine. Be that way!")
   }
 
-  test("alternate silence") {
+  "alternate silence" in {
     Bob.response("										") should
       be("Fine. Be that way!")
   }
 
-  test("multiple line question") {
+  "multiple line question" in {
     Bob.response("\nDoes this cryogenic chamber make me look fat?\nNo.") should
       be("Whatever.")
   }
 
-  test("starting with whitespace") {
+  "starting with whitespace" in {
     Bob.response("         hmmmmmmm...") should
       be("Whatever.")
   }
 
-  test("ending with whitespace") {
+  "ending with whitespace" in {
     Bob.response("Okay if like my  spacebar  quite a bit?   ") should
       be(
       "Sure.")
   }
 
-  test("other whitespace") {
+  "other whitespace" in {
     Bob.response("\n                 	") should
       be("Fine. Be that way!")
   }
 
-  test("non-question ending with whitespace") {
+  "non-question ending with whitespace" in {
     Bob.response("This is a statement ending with whitespace      ") should
       be("Whatever.")
   }

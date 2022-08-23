@@ -1,18 +1,18 @@
 package com.martinbrosenberg.exercises.exercism.side
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.side.diamond.Diamond
 
 /** @version 1.1.0 */
-class Diamond_Spec extends ExercismBaseSpec {
+class Diamond_Spec extends BaseSpec {
 
-  test("Degenerate case with a single 'A' row") {
+  "Degenerate case with a single 'A' row" in {
     Diamond.rows('A') should be(List(
       "A"
     ))
   }
 
-  test("Degenerate case with no row containing 3 distinct groups of spaces") {
+  "Degenerate case with no row containing 3 distinct groups of spaces" in {
     Diamond.rows('B') should be(List(
       " A ",
       "B B",
@@ -20,7 +20,7 @@ class Diamond_Spec extends ExercismBaseSpec {
     ))
   }
 
-  test("Smallest non-degenerate case with odd diamond side length") {
+  "Smallest non-degenerate case with odd diamond side length" in {
     Diamond.rows('C') should be(List(
       "  A  ",
       " B B ",
@@ -30,7 +30,7 @@ class Diamond_Spec extends ExercismBaseSpec {
     ))
   }
 
-  test("Smallest non-degenerate case with even diamond side length") {
+  "Smallest non-degenerate case with even diamond side length" in {
     Diamond.rows('D') should be(List(
       "   A   ",
       "  B B  ",
@@ -42,7 +42,7 @@ class Diamond_Spec extends ExercismBaseSpec {
     ))
   }
 
-  test("Largest possible diamond") {
+  "Largest possible diamond" in {
     Diamond.rows('Z') should be(List(
       "                         A                         ",
       "                        B B                        ",

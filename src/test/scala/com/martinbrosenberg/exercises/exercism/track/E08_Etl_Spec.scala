@@ -1,26 +1,26 @@
 package com.martinbrosenberg.exercises.exercism.track
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.track.e08_etl.Etl
 
 /** @version 1.0.0 */
-class E08_Etl_Spec extends ExercismBaseSpec {
+class E08_Etl_Spec extends BaseSpec {
 
-  test("a single letter") {
+  "a single letter" in {
     Etl.transform(Map(1 -> Seq("A"))) should be(Map("a" -> 1))
   }
 
-  test("single score with multiple letters") {
+  "single score with multiple letters" in {
     Etl.transform(Map(1 -> Seq("A", "E", "I", "O", "U"))) should be(Map("a" -> 1,
       "e" -> 1, "i" -> 1, "o" -> 1, "u" -> 1))
   }
 
-  test("multiple scores with multiple letters") {
+  "multiple scores with multiple letters" in {
     Etl.transform(Map(1 -> Seq("A", "E"), 2 -> Seq("D", "G"))) should be(Map("a" -> 1,
       "d" -> 2, "e" -> 1, "g" -> 2))
   }
 
-  test("multiple scores with differing numbers of letters") {
+  "multiple scores with differing numbers of letters" in {
     Etl.transform(Map(1 -> Seq("A", "E", "I", "O", "U", "L", "N", "R", "S", "T"),
       2 -> Seq("D", "G"), 3 -> Seq("B", "C", "M", "P"), 4 -> Seq("F", "H", "V", "W", "Y"),
       5 -> Seq("K"), 8 -> Seq("J", "X"), 10 -> Seq("Q", "Z"))) should be(Map("a" -> 1,

@@ -1,28 +1,28 @@
 package com.martinbrosenberg.exercises.exercism.side
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.side.rnatranscription.RnaTranscription
 
 /** @version 1.2.0 */
-class RnaTranscription_Spec extends ExercismBaseSpec {
+class RnaTranscription_Spec extends BaseSpec {
 
-  test("RNA complement of cytosine is guanine") {
+  "RNA complement of cytosine is guanine" in {
     RnaTranscription.toRna("C") should be(Some("G"))
   }
 
-  test("RNA complement of guanine is cytosine") {
+  "RNA complement of guanine is cytosine" in {
     RnaTranscription.toRna("G") should be(Some("C"))
   }
 
-  test("RNA complement of thymine is adenine") {
+  "RNA complement of thymine is adenine" in {
     RnaTranscription.toRna("T") should be(Some("A"))
   }
 
-  test("RNA complement of adenine is uracil") {
+  "RNA complement of adenine is uracil" in {
     RnaTranscription.toRna("A") should be(Some("U"))
   }
 
-  test("RNA complement") {
+  "RNA complement" in {
     RnaTranscription.toRna("ACGTGGTCTTAA") should be(Some("UGCACCAGAAUU"))
   }
 

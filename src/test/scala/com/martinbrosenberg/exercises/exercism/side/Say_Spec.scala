@@ -1,68 +1,68 @@
 package com.martinbrosenberg.exercises.exercism.side
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.side.say.Say
 
 /** @version 1.1.0 */
-class SayTest extends ExercismBaseSpec {
+class Say_Spec extends BaseSpec {
 
-  test("zero") {
+  "zero" in {
     Say.inEnglish(0) should be(Some("zero"))
   }
 
-  test("one") {
+  "one" in {
     Say.inEnglish(1) should be(Some("one"))
   }
 
-  test("fourteen") {
+  "fourteen" in {
     Say.inEnglish(14) should be(Some("fourteen"))
   }
 
-  test("twenty") {
+  "twenty" in {
     Say.inEnglish(20) should be(Some("twenty"))
   }
 
-  test("twenty-two") {
+  "twenty-two" in {
     Say.inEnglish(22) should be(Some("twenty-two"))
   }
 
-  test("one hundred") {
+  "one hundred" in {
     Say.inEnglish(100) should be(Some("one hundred"))
   }
 
-  test("one hundred twenty-three") {
+  "one hundred twenty-three" in {
     Say.inEnglish(123) should be(Some("one hundred twenty-three"))
   }
 
-  test("one thousand") {
+  "one thousand" in {
     Say.inEnglish(1000) should be(Some("one thousand"))
   }
 
-  test("one thousand two hundred thirty-four") {
+  "one thousand two hundred thirty-four" in {
     Say.inEnglish(1234) should be(Some("one thousand two hundred thirty-four"))
   }
 
-  test("one million") {
+  "one million" in {
     Say.inEnglish(1000000) should be(Some("one million"))
   }
 
-  test("one million two thousand three hundred forty-five") {
+  "one million two thousand three hundred forty-five" in {
     Say.inEnglish(1002345) should be(Some("one million two thousand three hundred forty-five"))
   }
 
-  test("one billion") {
+  "one billion" in {
     Say.inEnglish(1000000000) should be(Some("one billion"))
   }
 
-  test("a big number") {
-    Say.inEnglish(987654321123l) should be(Some("nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three"))
+  "a big number" in {
+    Say.inEnglish(987654321123L) should be(Some("nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three"))
   }
 
-  test("numbers below zero are out of range") {
+  "numbers below zero are out of range" in {
     Say.inEnglish(-1) should be(None)
   }
 
-  test("numbers above 999,999,999,999 are out of range") {
-    Say.inEnglish(1000000000000l) should be(None)
+  "numbers above 999,999,999,999 are out of range" in {
+    Say.inEnglish(1000000000000L) should be(None)
   }
 }

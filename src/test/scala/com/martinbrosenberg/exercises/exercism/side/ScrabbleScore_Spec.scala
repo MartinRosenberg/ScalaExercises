@@ -1,52 +1,52 @@
 package com.martinbrosenberg.exercises.exercism.side
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.side.scrabblescore.ScrabbleScore
 
 /** @version 1.1.0 */
-class ScrabbleScore_Spec extends ExercismBaseSpec {
+class ScrabbleScore_Spec extends BaseSpec {
 
-  test("lowercase letter") {
+  "lowercase letter" in {
     ScrabbleScore.score("a") should be(1)
   }
 
-  test("uppercase letter") {
+  "uppercase letter" in {
     ScrabbleScore.score("A") should be(1)
   }
 
-  test("valuable letter") {
+  "valuable letter" in {
     ScrabbleScore.score("f") should be(4)
   }
 
-  test("short word") {
+  "short word" in {
     ScrabbleScore.score("at") should be(2)
   }
 
-  test("short, valuable word") {
+  "short, valuable word" in {
     ScrabbleScore.score("zoo") should be(12)
   }
 
-  test("medium word") {
+  "medium word" in {
     ScrabbleScore.score("street") should be(6)
   }
 
-  test("medium, valuable word") {
+  "medium, valuable word" in {
     ScrabbleScore.score("quirky") should be(22)
   }
 
-  test("long, mixed-case word") {
+  "long, mixed-case word" in {
     ScrabbleScore.score("OxyphenButazone") should be(41)
   }
 
-  test("english-like word") {
+  "english-like word" in {
     ScrabbleScore.score("pinata") should be(8)
   }
 
-  test("empty input") {
+  "empty input" in {
     ScrabbleScore.score("") should be(0)
   }
 
-  test("entire alphabet available") {
+  "entire alphabet available" in {
     ScrabbleScore.score("abcdefghijklmnopqrstuvwxyz") should be(87)
   }
 

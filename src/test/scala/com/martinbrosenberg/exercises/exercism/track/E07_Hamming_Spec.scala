@@ -1,68 +1,68 @@
 package com.martinbrosenberg.exercises.exercism.track
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.track.e07_hamming.Hamming
 
 /** @version 2.1.0 */
-class E07_Hamming_Spec extends ExercismBaseSpec {
+class E07_Hamming_Spec extends BaseSpec {
 
-  test("empty strands") {
+  "empty strands" in {
     Hamming.distance("", "") should be (Some(0))
   }
 
-  test("identical strands") {
+  "identical strands" in {
     Hamming.distance("A", "A") should be (Some(0))
   }
 
-  test("long identical strands") {
+  "long identical strands" in {
     Hamming.distance("GGACTGA", "GGACTGA") should be (Some(0))
   }
 
-  test("complete distance in single nucleotide strands") {
+  "complete distance in single nucleotide strands" in {
     Hamming.distance("A", "G") should be (Some(1))
   }
 
-  test("complete distance in small strands") {
+  "complete distance in small strands" in {
     Hamming.distance("AG", "CT") should be (Some(2))
   }
 
-  test("small distance in small strands") {
+  "small distance in small strands" in {
     Hamming.distance("AT", "CT") should be (Some(1))
   }
 
-  test("small distance") {
+  "small distance" in {
     Hamming.distance("GGACG", "GGTCG") should be (Some(1))
   }
 
-  test("small distance in long strands") {
+  "small distance in long strands" in {
     Hamming.distance("ACCAGGG", "ACTATGG") should be (Some(2))
   }
 
-  test("non-unique character in first strand") {
+  "non-unique character in first strand" in {
     Hamming.distance("AAG", "AAA") should be (Some(1))
   }
 
-  test("non-unique character in second strand") {
+  "non-unique character in second strand" in {
     Hamming.distance("AAA", "AAG") should be (Some(1))
   }
 
-  test("same nucleotides in different positions") {
+  "same nucleotides in different positions" in {
     Hamming.distance("TAG", "GAT") should be (Some(2))
   }
 
-  test("large distance") {
+  "large distance" in {
     Hamming.distance("GATACA", "GCATAA") should be (Some(4))
   }
 
-  test("large distance in off-by-one strand") {
+  "large distance in off-by-one strand" in {
     Hamming.distance("GGACGGATTCTG", "AGGACGGATTCT") should be (Some(9))
   }
 
-  test("disallow first strand longer") {
+  "disallow first strand longer" in {
     Hamming.distance("AATG", "AAA") should be (None)
   }
 
-  test("disallow second strand longer") {
+  "disallow second strand longer" in {
     Hamming.distance("ATA", "AGTG") should be (None)
   }
 

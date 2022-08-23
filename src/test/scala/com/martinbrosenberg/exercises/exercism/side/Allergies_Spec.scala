@@ -1,80 +1,80 @@
 package com.martinbrosenberg.exercises.exercism.side
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.side.allergies.{Allergen, Allergies}
 
 /** @version 1.2.0 */
-class Allergies_Spec extends ExercismBaseSpec {
+class Allergies_Spec extends BaseSpec {
 
-  test("Allergen.Peanuts - no allergies means not allergic") {
+  "Allergen.Peanuts - no allergies means not allergic" in {
     Allergies.allergicTo(Allergen.Peanuts, 0) should be(false)
   }
 
-  test("Allergen.Cats - no allergies means not allergic") {
+  "Allergen.Cats - no allergies means not allergic" in {
     Allergies.allergicTo(Allergen.Cats, 0) should be(false)
   }
 
-  test("Allergen.Strawberries - no allergies means not allergic") {
+  "Allergen.Strawberries - no allergies means not allergic" in {
     Allergies.allergicTo(Allergen.Strawberries, 0) should be(false)
   }
 
-  test("Allergen.Eggs - is allergic to eggs") {
+  "Allergen.Eggs - is allergic to eggs" in {
     Allergies.allergicTo(Allergen.Eggs, 1) should be(true)
   }
 
-  test("Allergen.Eggs - allergic to eggs in addition to other stuff") {
+  "Allergen.Eggs - allergic to eggs in addition to other stuff" in {
     Allergies.allergicTo(Allergen.Eggs, 5) should be(true)
   }
 
-  test("Allergen.Shellfish - allergic to eggs in addition to other stuff") {
+  "Allergen.Shellfish - allergic to eggs in addition to other stuff" in {
     Allergies.allergicTo(Allergen.Shellfish, 5) should be(true)
   }
 
-  test("Allergen.Strawberries - allergic to eggs in addition to other stuff") {
+  "Allergen.Strawberries - allergic to eggs in addition to other stuff" in {
     Allergies.allergicTo(Allergen.Strawberries, 5) should be(false)
   }
 
-  test("Allergen.Eggs - allergic to strawberries but not peanuts") {
+  "Allergen.Eggs - allergic to strawberries but not peanuts" in {
     Allergies.allergicTo(Allergen.Eggs, 9) should be(true)
   }
 
-  test("Allergen.Peanuts - allergic to strawberries but not peanuts") {
+  "Allergen.Peanuts - allergic to strawberries but not peanuts" in {
     Allergies.allergicTo(Allergen.Peanuts, 9) should be(false)
   }
 
-  test("Allergen.Shellfish - allergic to strawberries but not peanuts") {
+  "Allergen.Shellfish - allergic to strawberries but not peanuts" in {
     Allergies.allergicTo(Allergen.Shellfish, 9) should be(false)
   }
 
-  test("Allergen.Strawberries - allergic to strawberries but not peanuts") {
+  "Allergen.Strawberries - allergic to strawberries but not peanuts" in {
     Allergies.allergicTo(Allergen.Strawberries, 9) should be(true)
   }
 
-  test("no allergies at all") {
+  "no allergies at all" in {
     Allergies.list(0) should be(List())
   }
 
-  test("allergic to just eggs") {
+  "allergic to just eggs" in {
     Allergies.list(1) should be(List(Allergen.Eggs))
   }
 
-  test("allergic to just peanuts") {
+  "allergic to just peanuts" in {
     Allergies.list(2) should be(List(Allergen.Peanuts))
   }
 
-  test("allergic to just strawberries") {
+  "allergic to just strawberries" in {
     Allergies.list(8) should be(List(Allergen.Strawberries))
   }
 
-  test("allergic to eggs and peanuts") {
+  "allergic to eggs and peanuts" in {
     Allergies.list(3) should be(List(Allergen.Eggs, Allergen.Peanuts))
   }
 
-  test("allergic to more than eggs but not peanuts") {
+  "allergic to more than eggs but not peanuts" in {
     Allergies.list(5) should be(List(Allergen.Eggs, Allergen.Shellfish))
   }
 
-  test("allergic to lots of stuff") {
+  "allergic to lots of stuff" in {
     Allergies.list(248) should be(
       List(Allergen.Strawberries,
         Allergen.Tomatoes,
@@ -83,7 +83,7 @@ class Allergies_Spec extends ExercismBaseSpec {
         Allergen.Cats))
   }
 
-  test("allergic to everything") {
+  "allergic to everything" in {
     Allergies.list(255) should be(
       List(Allergen.Eggs,
         Allergen.Peanuts,
@@ -95,7 +95,7 @@ class Allergies_Spec extends ExercismBaseSpec {
         Allergen.Cats))
   }
 
-  test("ignore non allergen score parts") {
+  "ignore non allergen score parts" in {
     Allergies.list(509) should be(
       List(Allergen.Eggs,
         Allergen.Shellfish,

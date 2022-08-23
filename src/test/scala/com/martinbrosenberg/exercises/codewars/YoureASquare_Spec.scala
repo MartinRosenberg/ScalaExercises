@@ -1,30 +1,30 @@
 package com.martinbrosenberg.exercises.codewars
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 
-class YoureASquare_Spec extends ExercismBaseSpec {
+class YoureASquare_Spec extends BaseSpec {
 
-	test("4") {
+	"4" in {
 		YoureASquare.isSquare(4) should be(true)
 	}
 
-	test("3") {
+	"3" in {
 		YoureASquare.isSquare(3) should be(false)
 	}
 
-	test("25") {
+	"25" in {
 		YoureASquare.isSquare(25) should be(true)
 	}
 
-	test("32") {
+	"32" in {
 		YoureASquare.isSquare(32) should be(false)
 	}
 
-	test("0") {
+	"0" in {
 		YoureASquare.isSquare(0) should be(true)
 	}
 
-	test("-1") {
+	"-1" in {
 		YoureASquare.isSquare(-1) should be(false)
 	}
 

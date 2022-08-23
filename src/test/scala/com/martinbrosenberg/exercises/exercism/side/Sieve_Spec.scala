@@ -1,28 +1,28 @@
 package com.martinbrosenberg.exercises.exercism.side
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.side.sieve.Sieve
 
 /** @version 1.1.0 */
-class Sieve_Spec extends ExercismBaseSpec {
+class Sieve_Spec extends BaseSpec {
 
-  test("no primes under two") {
+  "no primes under two" in {
     Sieve.primes(1) should be(List())
   }
 
-  test("find first prime") {
+  "find first prime" in {
     Sieve.primes(2) should be(List(2))
   }
 
-  test("find primes up to 10") {
+  "find primes up to 10" in {
     Sieve.primes(10) should be(List(2, 3, 5, 7))
   }
 
-  test("limit is prime") {
+  "limit is prime" in {
     Sieve.primes(13) should be(List(2, 3, 5, 7, 11, 13))
   }
 
-  test("find primes up to 1000") {
+  "find primes up to 1000" in {
     Sieve.primes(1000) should be(
       List(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,
         67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139,

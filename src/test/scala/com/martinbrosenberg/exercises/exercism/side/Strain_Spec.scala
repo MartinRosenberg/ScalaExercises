@@ -1,39 +1,39 @@
 package com.martinbrosenberg.exercises.exercism.side
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.side.strain.Strain
 
 /** @version created manually **/
-class Strain_Spec extends ExercismBaseSpec {
+class Strain_Spec extends BaseSpec {
 
-  test("handle empty keep") {
+  "handle empty keep" in {
     val result = Strain.keep[Int](List(), x => x < 10)
     result should be(List.empty)
   }
 
-  test("keep everything") {
+  "keep everything" in {
     val expectedList = List("a", "b", "c")
     val result = Strain.keep[String](expectedList, _ => true)
     result should be(expectedList)
   }
 
-  test("keep first and last") {
+  "keep first and last" in {
     val result = Strain.keep[Int](List(1, 2, 3), x => x % 2 != 0)
     result should be(List(1, 3))
   }
 
-  test("keep neither first or last") {
+  "keep neither first or last" in {
     val result = Strain.keep[Int](List(1, 2, 3, 4, 5), x => x % 2 == 0)
     result should be(List(2, 4))
   }
 
-  test("keep strings") {
+  "keep strings" in {
     val words = List("apple",  "zebra", "banana", "zombies", "cherimoya",  "zelot")
     val result = Strain.keep[String](words, s => s.startsWith("z"))
     result should be(List("zebra", "zombies", "zelot"))
   }
 
-  test("keep sequences") {
+  "keep sequences" in {
     val sequences = Seq(Seq(1, 2, 3), Seq(5, 5, 5), Seq(5, 1, 2), Seq(2, 1, 2),
       Seq(1, 5, 2), Seq(2, 2, 1), Seq(1, 2, 5))
     val expected = Seq(Seq(5, 5, 5), Seq(5, 1, 2), Seq(1, 5, 2), Seq(1, 2, 5))
@@ -41,28 +41,28 @@ class Strain_Spec extends ExercismBaseSpec {
     result should be (expected)
   }
 
-  test("handle empty discard") {
+  "handle empty discard" in {
     val result = Strain.discard[Int](List(), x => x < 10)
     result should be (List.empty)
   }
 
-  test("discard first and last") {
+  "discard first and last" in {
     val result = Strain.discard[Int](List(1, 2, 3), x => x % 2 != 0)
     result should be (List(2))
   }
 
-  test("discard neither first or last") {
+  "discard neither first or last" in {
     val result = Strain.discard[Int](List(1, 2, 3, 4, 5), x => x % 2 == 0)
     result should be (List(1, 3, 5))
   }
 
-  test("discard strings") {
+  "discard strings" in {
     val words = List("apple",  "zebra", "banana", "zombies", "cherimoya",  "zelot")
     val result = Strain.discard[String](words, s => s.startsWith("z"))
     result should be (List("apple", "banana", "cherimoya"))
   }
 
-  test("discard sequences") {
+  "discard sequences" in {
     val sequences = Seq(Seq(1, 2, 3), Seq(5, 5, 5), Seq(5, 1, 2), Seq(2, 1, 2),
       Seq(1, 5, 2), Seq(2, 2, 1), Seq(1, 2, 5))
     val expected = Seq(Seq(1, 2, 3), Seq(2, 1, 2), Seq(2, 2, 1))

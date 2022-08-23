@@ -1,30 +1,30 @@
 package com.martinbrosenberg.exercises.codewars
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 
-class HumanReadableTime_Spec extends ExercismBaseSpec {
+class HumanReadableTime_Spec extends BaseSpec {
 
-  test("zero") {
+  "zero" in {
     HumanReadableTime.format(0).success.value should be ("00:00:00")
   }
 
-  test("seconds only") {
+  "seconds only" in {
     HumanReadableTime.format(5).success.value should be ("00:00:05")
   }
 
-  test("minutes only") {
+  "minutes only" in {
     HumanReadableTime.format(60).success.value should be ("00:01:00")
   }
 
-  test("24 hours") {
+  "24 hours" in {
     HumanReadableTime.format(86399).success.value should be ("23:59:59")
   }
 
-  test("100 hours") {
+  "100 hours" in {
     HumanReadableTime.format(359999).success.value should be ("99:59:59")
   }
 
-  test("negative") {
+  "negative" in {
     HumanReadableTime.format(-1).failure.exception should be (an [IllegalArgumentException])
   }
 

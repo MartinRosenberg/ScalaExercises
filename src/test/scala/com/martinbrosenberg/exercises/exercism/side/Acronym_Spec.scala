@@ -1,40 +1,40 @@
 package com.martinbrosenberg.exercises.exercism.side
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.side.acronym.Acronym
 
 /** @version 1.6.0 */
-class Acronym_Spec extends ExercismBaseSpec {
+class Acronym_Spec extends BaseSpec {
 
-  test("basic") {
+  "basic" in {
     Acronym.abbreviate("Portable Network Graphics") should be ("PNG")
   }
 
-  test("lowercase words") {
+  "lowercase words" in {
     Acronym.abbreviate("Ruby on Rails") should be ("ROR")
   }
 
-  test("punctuation") {
+  "punctuation" in {
     Acronym.abbreviate("First In, First Out") should be ("FIFO")
   }
 
-  test("all caps word") {
+  "all caps word" in {
     Acronym.abbreviate("GNU Image Manipulation Program") should be ("GIMP")
   }
 
-  test("punctuation without whitespace") {
+  "punctuation without whitespace" in {
     Acronym.abbreviate("Complementary metal-oxide semiconductor") should be ("CMOS")
   }
 
-  test("very long abbreviation") {
+  "very long abbreviation" in {
     Acronym.abbreviate("Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me") should be ("ROTFLSHTMDCOALM")
   }
 
-  test("consecutive delimiters") {
+  "consecutive delimiters" in {
     Acronym.abbreviate("Something - I made up from thin air") should be ("SIMUFTA")
   }
 
-  test("apostrophes") {
+  "apostrophes" in {
     Acronym.abbreviate("Halley's Comet") should be ("HC")
   }
 

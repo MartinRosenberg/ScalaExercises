@@ -1,20 +1,20 @@
 package com.martinbrosenberg.exercises.exercism.side
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.side.minesweeper.Minesweeper
 
 /** @version 1.1.0 */
-class Minesweeper_Spec extends ExercismBaseSpec {
+class Minesweeper_Spec extends BaseSpec {
 
-  test("no rows") {
+  "no rows" in {
     Minesweeper.annotate(List()) should be(List())
   }
 
-  test("no columns") {
+  "no columns" in {
     Minesweeper.annotate(List("")) should be(List(""))
   }
 
-  test("no mines") {
+  "no mines" in {
     Minesweeper.annotate(List("   ",
       "   ",
       "   ")) should be(
@@ -23,7 +23,7 @@ class Minesweeper_Spec extends ExercismBaseSpec {
         "   "))
   }
 
-  test("minefield with only mines") {
+  "minefield with only mines" in {
     Minesweeper.annotate(List("***",
       "***",
       "***")) should be(
@@ -32,7 +32,7 @@ class Minesweeper_Spec extends ExercismBaseSpec {
         "***"))
   }
 
-  test("mine surrounded by spaces") {
+  "mine surrounded by spaces" in {
     Minesweeper.annotate(List("   ",
       " * ",
       "   ")) should be(
@@ -41,7 +41,7 @@ class Minesweeper_Spec extends ExercismBaseSpec {
         "111"))
   }
 
-  test("space surrounded by mines") {
+  "space surrounded by mines" in {
     Minesweeper.annotate(List("***",
       "* *",
       "***")) should be(
@@ -50,15 +50,15 @@ class Minesweeper_Spec extends ExercismBaseSpec {
         "***"))
   }
 
-  test("horizontal line") {
+  "horizontal line" in {
     Minesweeper.annotate(List(" * * ")) should be(List("1*2*1"))
   }
 
-  test("horizontal line, mines at edges") {
+  "horizontal line, mines at edges" in {
     Minesweeper.annotate(List("*   *")) should be(List("*1 1*"))
   }
 
-  test("vertical line") {
+  "vertical line" in {
     Minesweeper.annotate(List(" ",
       "*",
       " ",
@@ -71,7 +71,7 @@ class Minesweeper_Spec extends ExercismBaseSpec {
         "1"))
   }
 
-  test("vertical line, mines at edges") {
+  "vertical line, mines at edges" in {
     Minesweeper.annotate(List("*",
       " ",
       " ",
@@ -84,7 +84,7 @@ class Minesweeper_Spec extends ExercismBaseSpec {
         "*"))
   }
 
-  test("cross") {
+  "cross" in {
     Minesweeper.annotate(List("  *  ",
       "  *  ",
       "*****",
@@ -97,7 +97,7 @@ class Minesweeper_Spec extends ExercismBaseSpec {
         " 2*2 "))
   }
 
-  test("large minefield") {
+  "large minefield" in {
     Minesweeper.annotate(List(" *  * ",
       "  *   ",
       "    * ",

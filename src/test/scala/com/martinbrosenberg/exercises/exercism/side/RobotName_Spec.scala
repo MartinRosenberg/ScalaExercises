@@ -1,29 +1,29 @@
 package com.martinbrosenberg.exercises.exercism.side
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.side.RobotName_Spec._
 import com.martinbrosenberg.exercises.exercism.side.robotname.Robot
 
 import scala.collection.mutable
 
 /** @version created manually **/
-class RobotName_Spec extends ExercismBaseSpec {
+class RobotName_Spec extends BaseSpec {
 
-  test("has a name") {
+  "has a name" in {
     new Robot().name should fullyMatch regex nameRegex
   }
 
-  test("does not change its name") {
+  "does not change its name" in {
     val robot = new Robot
     val name = robot.name
     robot.name should be (name)
   }
 
-  test("does not have the same name as other robots") {
+  "does not have the same name as other robots" in {
     new Robot().name should not be new Robot().name
   }
 
-  test("can have its name reset") {
+  "can have its name reset" in {
     val robot = new Robot
     val name = robot.name
     robot.reset()
@@ -37,7 +37,7 @@ class RobotName_Spec extends ExercismBaseSpec {
   // "ignore" below to "test". There are 26^2 * 1,000 = 676,000 possible robot
   // names - you have to ensure that none are repeated. The Robot code needs to
   // be efficient enough to allow all 676,000 unique names to be generated.
-  test("a large number of new instances have unique names") {
+  "a large number of new instances have unique names" in {
     val alreadySet = mutable.HashSet.empty[String]
     for(_ <- 0 until 676000 - 6) { // as 6 robot names are generated in the tests above!
       val name = new Robot().name

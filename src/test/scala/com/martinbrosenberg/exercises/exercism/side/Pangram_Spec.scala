@@ -1,48 +1,48 @@
 package com.martinbrosenberg.exercises.exercism.side
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.side.pangram.Pangram
 
 /** @version 1.4.0 */
-class Pangram_Spec extends ExercismBaseSpec {
+class Pangram_Spec extends BaseSpec {
 
-  test("sentence empty") {
+  "sentence empty" in {
     Pangram.isPangram("") should be (false)
   }
 
-  test("recognizes a perfect lower case pangram") {
+  "recognizes a perfect lower case pangram" in {
     Pangram.isPangram("abcdefghijklmnopqrstuvwxyz") should be (true)
   }
 
-  test("pangram with only lower case") {
+  "pangram with only lower case" in {
     Pangram.isPangram("the quick brown fox jumps over the lazy dog") should be (true)
   }
 
-  test("missing character 'x'") {
+  "missing character 'x'" in {
     Pangram.isPangram("a quick movement of the enemy will jeopardize five gunboats") should be (false)
   }
 
-  test("another missing character, e.g. 'h'") {
+  "another missing character, e.g. 'h'" in {
     Pangram.isPangram("five boxing wizards jump quickly at it") should be (false)
   }
 
-  test("pangram with underscores") {
+  "pangram with underscores" in {
     Pangram.isPangram("the_quick_brown_fox_jumps_over_the_lazy_dog") should be (true)
   }
 
-  test("pangram with numbers") {
+  "pangram with numbers" in {
     Pangram.isPangram("the 1 quick brown fox jumps over the 2 lazy dogs") should be (true)
   }
 
-  test("missing letters replaced by numbers") {
+  "missing letters replaced by numbers" in {
     Pangram.isPangram("7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog") should be (false)
   }
 
-  test("pangram with mixed case and punctuation") {
+  "pangram with mixed case and punctuation" in {
     Pangram.isPangram(""""Five quacking Zephyrs jolt my wax bed."""") should be (true)
   }
 
-  test("upper and lower case versions of the same character should not be counted separately") {
+  "upper and lower case versions of the same character should not be counted separately" in {
     Pangram.isPangram("the quick brown fox jumps over with lazy FX") should be (false)
   }
 

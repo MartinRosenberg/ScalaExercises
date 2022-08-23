@@ -1,46 +1,46 @@
 package com.martinbrosenberg.exercises.exercism.track
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.track.e05_gradeschool.School
 
 /** @version created manually */
-class E05_GradeSchool_Spec extends ExercismBaseSpec {
+class E05_GradeSchool_Spec extends BaseSpec {
   val school = new School
 
-  test ("empty school") {
+  "empty school" in {
     school.db should be (Map())
   }
 
-  test ("add student") {
+  "add student" in {
     school.add("Aimee", 2)
     school.db should be (Map(2 -> Seq("Aimee")))
   }
 
-  test ("add more students in same class") {
+  "add more students in same class" in {
     school.add("James", 2)
     school.add("Blair", 2)
     school.add("Paul", 2)
     school.db should be (Map(2 -> Seq("James", "Blair", "Paul")))
   }
 
-  test ("add students to different grades") {
+  "add students to different grades" in {
     school.add("Chelsea", 3)
     school.add("Logan", 7)
     school.db should be (Map(3 -> Seq("Chelsea"), 7 -> Seq("Logan")))
   }
 
-  test ("get students in a grade") {
+  "get students in a grade" in {
     school.add("Franklin", 5)
     school.add("Bradley", 5)
     school.add("Jeff", 1)
     school.grade(5) should be (Seq("Franklin", "Bradley"))
   }
 
-  test ("get students in a non-existant grade") {
+  "get students in a non-existant grade" in {
     school.grade(1) should be (Seq())
   }
 
-  test ("sort school") {
+  "sort school" in {
     school.add("Jennifer", 4)
     school.add("Kareem", 6)
     school.add("Christopher", 4)

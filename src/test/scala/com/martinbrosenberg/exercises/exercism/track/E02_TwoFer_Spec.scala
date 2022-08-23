@@ -1,28 +1,28 @@
 package com.martinbrosenberg.exercises.exercism.track
 
-import com.martinbrosenberg.exercises.exercism.ExercismBaseSpec
+import com.martinbrosenberg.exercises.BaseSpec
 import com.martinbrosenberg.exercises.exercism.track.e02_twofer.Twofer
 
 /** @version 1.2.0 */
-class E02_TwoFer_Spec extends ExercismBaseSpec {
+class E02_TwoFer_Spec extends BaseSpec {
 
-  test("no name given") {
+  "no name given" in {
     Twofer.twofer() should be ("One for you, one for me.")
   }
 
-  test("empty name given") {
+  "empty name given" in {
     Twofer.twofer("") should be ("One for you, one for me.")
   }
 
-  test("null given") {
+  "null given" in {
     Twofer.twofer(null) should be ("One for you, one for me.")
   }
 
-  test("a name given") {
+  "a name given" in {
     Twofer.twofer("Alice") should be ("One for Alice, one for me.")
   }
 
-  test("another name given") {
+  "another name given" in {
     Twofer.twofer("Bob") should be ("One for Bob, one for me.")
   }
 
