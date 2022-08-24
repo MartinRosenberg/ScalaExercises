@@ -22,7 +22,7 @@ object E001_MultiplesOf3And5_Spec {
 
   private val functions = Seq[(String, Int => Long)](
     ("sum_1", sum_1),
-    ("sum_2", sum_2),
+//    ("sum_2", sum_2),
   )
 
   private val testCases = Seq[(Int, Long)](
