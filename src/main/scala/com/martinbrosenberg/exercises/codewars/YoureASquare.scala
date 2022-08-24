@@ -8,6 +8,6 @@ package com.martinbrosenberg.exercises.codewars
 	*/
 object YoureASquare {
 
-	def isSquare(x: Int): Boolean = Math.sqrt(x).isWhole
+	def isSquare(x: Int): Boolean = math.sqrt(x).isWhole
 
 }
