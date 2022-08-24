@@ -16,9 +16,9 @@ object E001_MultiplesOf3And5 {
     * O(n) solution.
     */
   def sum_1(max: Int): Long =
-    (1 until max)
+    (1L until max)
       .filter(x => x % 3 == 0 || x % 5 == 0)
-      .foldLeft(0L)((a, c) => a + c)
+      .sum
 
   /** Constraints: O(1) time.
     */
