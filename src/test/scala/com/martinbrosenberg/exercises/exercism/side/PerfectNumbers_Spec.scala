@@ -43,7 +43,6 @@ class PerfectNumbers_Spec extends BaseSpec {
   }
 
   "Large deficient number is classified correctly" in {
-    pending
     PerfectNumbers.classify(33550337) should be(Right(NumberType.Deficient))
   }
 

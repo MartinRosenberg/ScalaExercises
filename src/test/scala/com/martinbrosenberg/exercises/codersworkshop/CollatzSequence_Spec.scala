@@ -8,7 +8,7 @@ class CollatzSequence_Spec extends BaseSpec {
 
   for (TestCase(start, steps) <- testCases) {
     s"collatzSequence should take $steps steps when starting from $start" in {
-      assertResult(steps)(collatzSequence(start))
+      collatzSequence(start).success.value should be(steps)
     }
   }
 

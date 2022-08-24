@@ -24,10 +24,6 @@ class StopSpinningMyWords_Spec extends BaseSpec {
 		StopSpinningMyWords.spinWords("Hey wollef sroirraw") should be("Hey fellow warriors")
 	}
 
-	"This is a test" in {
-		StopSpinningMyWords.spinWords("This is a test") should be("This is a test")
-	}
-
 	"This is rehtona test" in {
 		StopSpinningMyWords.spinWords("This is rehtona test") should be("This is another test")
 	}

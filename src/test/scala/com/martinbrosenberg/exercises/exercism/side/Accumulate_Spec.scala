@@ -19,7 +19,6 @@ class Accumulate_Spec extends BaseSpec {
   }
 
   "accumulate upcases" in {
-    pending
     val accumulate = new Accumulate
     val accumulation = accumulate.accumulate[String, String](_.map(_.toUpper), List("hello", "world"))
     accumulation should be (List("HELLO", "WORLD"))
